@@ -3,7 +3,7 @@
     'use strict';
 
     var Qnumber = 0;
-    let Qcount = null;
+    var Qcount = null;
     var Startflg = 0;
     var Anumber = 0;
    const MaxQ = 5;
