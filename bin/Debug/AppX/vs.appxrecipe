@@ -31,7 +31,7 @@
     <AppXManifest Include="C:\Users\1104028\Desktop\三年\おためし\Project2\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-07-03T03:23:47.081</Modified>
+      <Modified>2019-07-03T15:38:08.654</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -90,11 +90,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2019-07-03T02:46:44.103</Modified>
+      <Modified>2019-07-03T16:07:29.256</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\js\main.js">
       <PackagePath>js\main.js</PackagePath>
-      <Modified>2019-07-03T05:34:26.087</Modified>
+      <Modified>2019-07-03T15:48:50.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\fav.ico">
       <PackagePath>images\fav.ico</PackagePath>
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-07-03T03:23:46.961</Modified>
+      <Modified>2019-07-03T15:38:07.514</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

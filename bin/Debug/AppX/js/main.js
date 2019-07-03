@@ -15,30 +15,33 @@
 
     var t;
 
+    
+
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
+    var context;
 
-// Audio 用の buffer を読み込む
-var getAudioBuffer = function(url, fn) {  
-  var req = new XMLHttpRequest();
-  // array buffer を指定
-  req.responseType = 'arraybuffer';
+    // Audio 用の buffer を読み込む
+    var getAudioBuffer = function (url, fn) {
+        var req = new XMLHttpRequest();
+        // array buffer を指定
+        req.responseType = 'arraybuffer';
 
-  req.onreadystatechange = function() {
-    if (req.readyState === 4) {
-      if (req.status === 0 || req.status === 200) {
-        // array buffer を audio buffer に変換
-        context.decodeAudioData(req.response, function(buffer) {
-          // コールバックを実行
-          fn(buffer);
-        });
-      }
-    }
-  };
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                if (req.status === 0 || req.status === 200) {
+                    // array buffer を audio buffer に変換
+                    context.decodeAudioData(req.response, function (buffer) {
+                        // コールバックを実行
+                        fn(buffer);
+                    });
+                }
+            }
+        };
 
-  req.open('GET', url, true);
-  req.send('');
-};
+        req.open('GET', url, true);
+        req.send('');
+    };
+
 
 // サウンドを再生
 var playSound = function(buffer) {
@@ -63,22 +66,23 @@ var playSound = function(buffer) {
     var elem = document.getElementById("img")
     parseInt(Qcount, 10);
 
-    // BGMを再生
-    getAudioBuffer('https://www.dropbox.com/s/rne2zk1ysep6ro2/r6.mp3', function (buffer) {     
-        playSound(buffer);
-    });
+
     //初期化
     start.addEventListener('click', function () {
- 
-       
+        context = new AudioContext();
+    
         if (Startflg == 0) {
             // サウンドを読み込む
-            getAudioBuffer('audio/se.mp3', function (buffer) {
+            getAudioBuffer('https://raw.githubusercontent.com/studyOnl/koredake/master/audio/se.mp3', function (buffer) {
 
                 // サウンドを再生
                 playSound(buffer);
             });
-  
+            getAudioBuffer('https://raw.githubusercontent.com/studyOnl/koredake/master/audio/r6.mp3', function (buffer) {
+
+                // サウンドを再生
+                playSound(buffer);
+            });
             ButtonReset();
             RandomCheck();
             Listadd();
@@ -197,7 +201,7 @@ var playSound = function(buffer) {
         reset.addEventListener("click", function () {
             //Qnumber = parseInt(Qnumber + 1) ;
             Click = 0;
-            elem.src = "images/study_man_headphone.png";
+            elem.src = "https://github.com/studyOnl/koredake/blob/master/images/study_man_headphone.png?raw=true";
             Gen.textContent = "";
             Kai.textContent = "現在" + Anumber + "問正解";
             reset.classList.add("hidden");
@@ -219,20 +223,24 @@ var playSound = function(buffer) {
     //正当判定
     function Question(Answerid, Clickid, Reason) {
         if (Answerid == Clickid) {
-            elem.src = "images/quiz_man_maru.png";
-            getAudioBuffer('audio/correct3.mp3', function (buffer) {         // サウンドを再生
+            elem.src = "https://github.com/studyOnl/koredake/blob/master/images/quiz_man_maru.png?raw=true";
+            getAudioBuffer('https://raw.githubusercontent.com/studyOnl/koredake/master/audio/correct3.mp3', function (buffer) {
+
+                // サウンドを再生
                 playSound(buffer);
-            });
+            });          
             Anumber++;
             Qcount+=1;
             result.textContent = Reason;
          
         }
         else {
-            elem.src = "images/quiz_man_batsu.png";
-            getAudioBuffer('audio/incorrect1.mp3', function (buffer) {         // サウンドを再生
+            elem.src = "https://github.com/studyOnl/koredake/blob/master/images/quiz_man_batsu.png?raw=true";
+            getAudioBuffer('https://raw.githubusercontent.com/studyOnl/koredake/master/audio/incorrect1.mp3', function (buffer) {
+
+                // サウンドを再生
                 playSound(buffer);
-            });
+            });     
             Qcount+=1;
             result.textContent = Reason;
 
