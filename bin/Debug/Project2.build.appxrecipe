@@ -31,20 +31,17 @@
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\favicon.ico">
-      <PackagePath>images\favicon.ico</PackagePath>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\5lp36.jpg">
+      <PackagePath>images\5lp36.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\index.html">
-      <PackagePath>index.html</PackagePath>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\quiz_man_batsu.png">
+      <PackagePath>images\quiz_man_batsu.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\js\main.js">
-      <PackagePath>js\main.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\quiz_man_maru.png">
+      <PackagePath>images\quiz_man_maru.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\pigboy.png">
-      <PackagePath>images\pigboy.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
@@ -62,15 +59,21 @@
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\title.png">
-      <PackagePath>images\title.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\study_man_headphone.png">
+      <PackagePath>images\study_man_headphone.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\wo057.png">
-      <PackagePath>images\wo057.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\index.html">
+      <PackagePath>index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\images\fav.ico">
+      <PackagePath>images\fav.ico</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\1104028\Desktop\三年\おためし\Project2\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

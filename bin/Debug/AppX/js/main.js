@@ -3,12 +3,12 @@
     'use strict';
 
     var Qnumber = 0;
-    let Qcount = null;
+    var Qcount = null;
     var Startflg = 0;
     var Anumber = 0;
    const MaxQ = 5;
     var Click = 0;
-     var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+     var arr = [0, 2, 3, 4, 5, 6, 7, 8];
     var a = arr.length;
     var i = 0;
 
@@ -53,11 +53,6 @@ var playSound = function(buffer) {
 };
 
 // main
-
-
-
-
-
     var btn = document.getElementById('btn');
     var btn2 = document.getElementById('btn2');
     var result = document.getElementById('result');
@@ -65,15 +60,17 @@ var playSound = function(buffer) {
     var start = document.getElementById('start');
     var Gen = document.getElementById('Gen');
     var Kai = document.getElementById('Kai');
-    var img1 = document.getElementById('img');
+    var elem = document.getElementById("img")
     parseInt(Qcount, 10);
 
-    getAudioBuffer('audio/riddle_of_darkness.wav', function (buffer) {         // サウンドを再生
+    // BGMを再生
+    getAudioBuffer('https://www.dropbox.com/s/rne2zk1ysep6ro2/r6.mp3', function (buffer) {     
         playSound(buffer);
     });
     //初期化
     start.addEventListener('click', function () {
-        
+ 
+       
         if (Startflg == 0) {
             // サウンドを読み込む
             getAudioBuffer('audio/se.mp3', function (buffer) {
@@ -89,7 +86,7 @@ var playSound = function(buffer) {
             Kai.textContent = "";
             Gen.textContent = "現在" + Anumber + "問正解";
 
-            start.classList.add("hidden");
+            start.textContent = " ";
         }
 
 
@@ -199,7 +196,8 @@ var playSound = function(buffer) {
         //「次の問題へ」を押した際の処理
         reset.addEventListener("click", function () {
             //Qnumber = parseInt(Qnumber + 1) ;
-            Click =0;
+            Click = 0;
+            elem.src = "images/study_man_headphone.png";
             Gen.textContent = "";
             Kai.textContent = "現在" + Anumber + "問正解";
             reset.classList.add("hidden");
@@ -210,23 +208,18 @@ var playSound = function(buffer) {
 
     }
 
-
+    //変数再初期化
     function ButtonReset() {
-       
          Qcount = 0;
          Startflg = 0;
-         Anumber = 0;
-    
-
-      
-         
+         Anumber = 0;   
          i = 0;
     }
 
     //正当判定
     function Question(Answerid, Clickid, Reason) {
         if (Answerid == Clickid) {
-           
+            elem.src = "images/quiz_man_maru.png";
             getAudioBuffer('audio/correct3.mp3', function (buffer) {         // サウンドを再生
                 playSound(buffer);
             });
@@ -236,6 +229,7 @@ var playSound = function(buffer) {
          
         }
         else {
+            elem.src = "images/quiz_man_batsu.png";
             getAudioBuffer('audio/incorrect1.mp3', function (buffer) {         // サウンドを再生
                 playSound(buffer);
             });
@@ -244,12 +238,12 @@ var playSound = function(buffer) {
 
         }
  
-        if (parseInt(Qcount,10)=== 5) {
-            console.log("あああ" + Qcount);
+        if (parseInt(Qcount,10)=== MaxQ) {
             Qcount = 0;       
             Last();
         }
     }
+    //乱数セット
     function RandomCheck() {
 
         while (a) {
@@ -264,6 +258,7 @@ var playSound = function(buffer) {
         arr.forEach(function (value) { console.log(value) });
     }
 
+    //問題セット
     function Listadd() {
         Qnumber = arr[i];
         i++
@@ -302,20 +297,16 @@ var playSound = function(buffer) {
     function Last() {
      
             reset.textContent = "結果を表示する";
-        reset.addEventListener("click", function () {
-
-            
+        reset.addEventListener("click", function () {       
             switch (Anumber) {
-                case 0: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。もっと勉強するようにしましょう。"; break;
-                case 1: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。もっと勉強するようにしましょう。"; break;
-                case 2: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。もっと勉強するようにしましょう。"; break;
-                case 3: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。中々凄いですね！"; break;
-                case 4: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。もう一息です！"; break;
-                case 5: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！。全問正解です！お見事！"; break;
+       
+                case 3: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！中々凄いですね！"; break;
+                case 4: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！もう一息です！"; break;
+                case 5: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！全問正解です！お見事！"; break;
+                default: result.textContent = parseInt(MaxQ) + "問中" + parseInt(Anumber) + "問正解！"; break;
             }
-                start.textContent = "ああああ";
-                Startflg = 0;
-                Qcount = 0;
+                start.textContent = "F5キーで最初の画面に戻ります";
+  
             });
  
     }
